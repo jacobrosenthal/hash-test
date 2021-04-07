@@ -56,20 +56,30 @@ let task = {
 
 console.log("loading");
 
-var t0 = performance.now()
-var blah = mimc(task);
-console.log(blah);
-var t1 = performance.now()
-var time = (t1 - t0);
-console.log("Call to mimc " + time + " milliseconds.")
+
+var times = [];
+for (let i = 0; i < 2; i++) {
+    var t0 = performance.now()
+    var res = mimc(task);
+    var t1 = performance.now()
+    var time = (t1 - t0);
+    times.push(time);
+}
+var avg = times.reduce((accumulator, currentValue) => accumulator + currentValue) / times.length;
+console.log("Call to mimc average " + avg + " milliseconds.")
 console.log('\n\n')
 
-var t0 = performance.now()
-var blah = mimcjs(task);
-console.log(blah);
-var t1 = performance.now()
-var time = (t1 - t0);
-console.log("Call to js " + time + " milliseconds.")
+
+var times = [];
+for (let i = 0; i < 2; i++) {
+    var t0 = performance.now()
+    var hash = mimcjs(task);
+    var t1 = performance.now()
+    var time = (t1 - t0);
+    times.push(time);
+}
+var avg = times.reduce((accumulator, currentValue) => accumulator + currentValue) / times.length;
+console.log("Call to js " + avg + " milliseconds.")
 console.log('\n\n')
 
 

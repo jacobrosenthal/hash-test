@@ -631,7 +631,7 @@ micromatch@^4.0.0:
     braces "^3.0.1"
     picomatch "^2.0.5"
 
-mimc-wasm@0.1.0:
+mimc-wasm@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/mimc-wasm/-/mimc-wasm-0.1.0.tgz#d9e9bea16ef8de951c15132e4696b6d3ae7a1355"
   integrity sha512-Pf0Gr2dJHwO7OrvX5JQ5t1Vs3LocWH0dnPb8u7mta+CblFryCLkVwHvbHLpesfhVmsng4/7oLVgba9De9LDWLQ==

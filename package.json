@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mimc-wasm": "0.1.0"
+    "big-integer": "1.6.48",
+    "mimc-wasm": "~0.1.0"
   },
   "devDependencies": {
     "ts-loader": "^8.1.0",
